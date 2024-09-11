@@ -1,53 +1,66 @@
-//
-//  SwiftUIView.swift
-//  Memorize
-//
-//  Created by jatin foujdar on 11/09/24.
-//
-
 import SwiftUI
 
 struct SwiftUIView: View {
-let emojis = ["🐙","🐵","🐒","🦍","🦧","🐶","🐕"]
+    let emojis = ["🐙", "🐵", "🐒", "🦍", "🦧", "🐶", "🐕"]
+    
     var body: some View {
-        ZStack{
-            Text("Memorize!")
-                .font(.largeTitle)
-            .fontWeight(.bold)
-            .frame(maxHeight: .infinity, alignment: .top)
-            HStack{
-                ForEach(0..<emojis.count, id: \.self){
-                    index in CardViews(content: emojis[index])
-                }
-        }
+        VStack {
+            // Title
+            HStack {
+                Text("Memorize!")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+            }
+            .padding()
+            
+            // Cards
            
+            LazyVGrid(columns: [GridItem(),GridItem(),GridItem()]){
+                    ForEach(emojis, id: \.self) { emoji in
+                        CardViews(content: emoji)
+                    }
+            }
+            
+            Spacer()
+            
+            // Footer
+            HStack {
+                Image(systemName: "globe")
+                    .font(.title)
+                    .foregroundColor(.blue)
+                    .fontWeight(.bold)
+                
+                Spacer()
+                
+                Image(systemName: "car")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.blue)
+            }
+            .padding()
         }
-        HStack{
-            Text("sd")
-        }
+    }
+}
+
+struct CardViews: View {
+    let content: String
+    
+    var body: some View {
+        RoundedRectangle(cornerRadius: 10)
+            .fill(Color.orange)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .strokeBorder(Color.black, lineWidth: 2)
+            )
+            .overlay(
+                Text(content)
+                    .font(.largeTitle)
+                    .foregroundColor(.black)
+            )
+            .frame(width: 100, height: 100) // Adjust size as needed
     }
 }
 
 #Preview {
     SwiftUIView()
 }
-
-struct CardViews: View {
-    let content: String
-    var body: some View {
-        let base = RoundedRectangle(cornerRadius: 10)
-        
-        base
-            .fill(Color.orange)
-            .overlay(
-                base
-                    .strokeBorder(Color.black, lineWidth: 2)
-            )
-            .overlay(
-                Text(content)
-                    .foregroundColor(.black)
-            )
-            .frame(width: 60,height:60)// Optional: Add some padding around the card
-    }
-}
-
