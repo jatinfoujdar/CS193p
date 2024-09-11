@@ -10,16 +10,21 @@ import SwiftUI
 struct SwiftUIView: View {
 let emojis = ["🐙","🐵","🐒","🦍","🦧","🐶","🐕"]
     var body: some View {
-        VStack{
-            
+        ZStack{
+            Text("Memorize!")
+                .font(.largeTitle)
+            .fontWeight(.bold)
+            .frame(maxHeight: .infinity, alignment: .top)
             HStack{
                 ForEach(0..<emojis.count, id: \.self){
-                    index in CardView(content: emojis[index])
+                    index in CardViews(content: emojis[index])
                 }
-            }
-          
         }
-        
+           
+        }
+        HStack{
+            Text("sd")
+        }
     }
 }
 
@@ -40,10 +45,9 @@ struct CardViews: View {
             )
             .overlay(
                 Text(content)
-                    .foregroundColor(.white) // Optional: Set text color
+                    .foregroundColor(.black)
             )
-            .frame(width: 100,height:100)
-            .padding() // Optional: Add some padding around the card
+            .frame(width: 60,height:60)// Optional: Add some padding around the card
     }
 }
 
