@@ -11,6 +11,7 @@
 		59504EB52C8F452C00E13582 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59504EB42C8F452C00E13582 /* ContentView.swift */; };
 		59504EB72C8F452D00E13582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59504EB62C8F452D00E13582 /* Assets.xcassets */; };
 		59504EBA2C8F452D00E13582 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59504EB92C8F452D00E13582 /* Preview Assets.xcassets */; };
+		59E8AE122C9165B700CF18B3 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E8AE112C9165B700CF18B3 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		59504EB42C8F452C00E13582 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		59504EB62C8F452D00E13582 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59504EB92C8F452D00E13582 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		59E8AE112C9165B700CF18B3 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 		59504EA62C8F452C00E13582 = {
 			isa = PBXGroup;
 			children = (
+				59E8AE102C91659900CF18B3 /* Assignment-L2 */,
 				59504EB12C8F452C00E13582 /* Memorize */,
 				59504EB02C8F452C00E13582 /* Products */,
 			);
@@ -65,6 +68,14 @@
 				59504EB92C8F452D00E13582 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		59E8AE102C91659900CF18B3 /* Assignment-L2 */ = {
+			isa = PBXGroup;
+			children = (
+				59E8AE112C9165B700CF18B3 /* SwiftUIView.swift */,
+			);
+			path = "Assignment-L2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +150,7 @@
 			files = (
 				59504EB52C8F452C00E13582 /* ContentView.swift in Sources */,
 				59504EB32C8F452C00E13582 /* MemorizeApp.swift in Sources */,
+				59E8AE122C9165B700CF18B3 /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
