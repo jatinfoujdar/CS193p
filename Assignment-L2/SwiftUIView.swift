@@ -25,20 +25,22 @@ struct SwiftUIView: View {
             
             // Footer
             HStack {
-                Button("Add"){
-                    cardCounts += 1
-                }
+                Button(action: {                                  cardCounts += 1
+                    }) {
+                        Image(systemName: "rectangle.stack.badge.plus")
+                                      .font(.title)
+                                      .foregroundColor(.blue)
+                              }
                     .font(.title)
-                    .foregroundColor(.blue)
                     .fontWeight(.bold)
-                
+                    .foregroundColor(.blue)
+            
                 Spacer()
-                
-                Button("Minus"){
-                    if(cardCounts > 0){
-                        cardCounts -= 1
-                    }
-                }
+                Button(action: {                                  cardCounts -= 1
+                    }) { Image(systemName: "rectangle.stack.badge.minus")
+                                      .font(.title)
+                                      .foregroundColor(.blue)
+                              }
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.blue)
