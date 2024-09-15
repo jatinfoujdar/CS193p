@@ -1,9 +1,13 @@
 import SwiftUI
 
 struct SwiftUIView: View {
+    var viewModel: EmojiMemoryGame
+    
     let emojis = ["🐙", "🐵", "🐒", "🦍", "🦧", "🐶", "🐕"]
     @State var cardCounts = 4
     var body: some View {
+       
+        
         VStack {
             // Title
             HStack {
@@ -83,5 +87,5 @@ struct CardViews: View {
 
 
 #Preview {
-    SwiftUIView()
+    SwiftUIView(viewModel: <#EmojiMemoryGame#>)
 }

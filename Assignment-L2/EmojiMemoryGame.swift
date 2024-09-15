@@ -7,6 +7,13 @@
 
 import SwiftUI
 
-class EmojiMemoryGame: {
-    var model: MemorizeGameModel<String>
+class EmojiMemoryGame {
+    private var model: MemorizeGameModel<String> = SwiftUIView<String>(numberOfPairsOfCards: 4)
+    
+    var cards: Array<MemorizeGameModel<String>.Card>{
+        return model.cards
+    }
+    func choose(_ card: MemorizeGameModel<String>.Card){
+        model.choose( card)
+    }
 }
